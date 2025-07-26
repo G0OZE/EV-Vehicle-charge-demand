@@ -26,7 +26,7 @@ setup(
     name="aicte-workflow-tool",
     version=get_version(),
     author="AICTE Workflow Tool Team",
-    author_email="your-email@example.com",
+    author_email="killerfantom23@gmail.com",
     description="Automation tool for AICTE internship project workflows",
     long_description=long_description,
     long_description_content_type="text/markdown",

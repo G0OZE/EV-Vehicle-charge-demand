@@ -387,4 +387,4 @@ After successful installation:
 - **Documentation**: [docs/](../docs/)
 - **Issues**: [GitHub Issues](https://github.com/your-org/aicte-workflow-tool/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/your-org/aicte-workflow-tool/discussions)
-- **Email**: support@your-org.com
+- **Email**: killerfantom23@gmail.com

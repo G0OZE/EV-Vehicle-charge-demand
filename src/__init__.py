@@ -5,8 +5,8 @@ A comprehensive automation tool for AICTE internship project workflows.
 """
 
 __version__ = "1.0.0"
-__author__ = "AICTE Workflow Tool Team"
-__email__ = "your-email@example.com"
+__author__ = "G0OZE"
+__email__ = "killerfantom23@gmail.com"
 __description__ = "Automation tool for AICTE internship project workflows"
 
 # Import main components for easy access

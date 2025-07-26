@@ -281,7 +281,7 @@ We follow [Semantic Versioning](https://semver.org/):
 
 - **GitHub Issues**: Bug reports and feature requests
 - **GitHub Discussions**: General questions and discussions
-- **Email**: maintainer@example.com for private matters
+- **Email**: killerfantom23@gmail.com for private matters
 
 ### Development Questions
 
