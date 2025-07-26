@@ -301,6 +301,11 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 4. Run the test suite: `python -m pytest`
 5. Submit a pull request
 
+### Core Team
+
+- **G0OZE** - Project Lead & Architecture
+- **GANTA PRANEETH REDDY** - Co-Developer & ML Models
+
 ### Code Style
 
 - Follow PEP 8 guidelines
@@ -337,6 +342,11 @@ For more help, check the [troubleshooting guide](docs/TROUBLESHOOTING.md) or [op
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 👥 Authors & Contributors
+
+- **G0OZE** - Lead Developer
+- **GANTA PRANEETH REDDY** - Collaborator & Co-Developer
+
 ## 🙏 Acknowledgments
 
 - Electric vehicle industry data providers
@@ -351,5 +361,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ for EV infrastructure planning**
+**Made with ❤️ for EV infrastructure planning by G0OZE & GANTA PRANEETH REDDY**
 

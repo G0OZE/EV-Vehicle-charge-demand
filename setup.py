@@ -25,7 +25,7 @@ def get_version():
 setup(
     name="ev-charge-demand-tool",
     version=get_version(),
-    author="G0OZE",
+    author="G0OZE, GANTA PRANEETH REDDY",
     author_email="killerfantom23@gmail.com",
     description="ML tool for EV vehicle charge demand analysis and prediction",
     long_description=long_description,

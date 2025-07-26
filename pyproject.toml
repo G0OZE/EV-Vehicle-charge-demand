@@ -9,10 +9,12 @@ description = "ML tool for EV vehicle charge demand analysis and prediction"
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [
-    {name = "G0OZE", email = "killerfantom23@gmail.com"}
+    {name = "G0OZE", email = "killerfantom23@gmail.com"},
+    {name = "GANTA PRANEETH REDDY"}
 ]
 maintainers = [
-    {name = "G0OZE", email = "killerfantom23@gmail.com"}
+    {name = "G0OZE", email = "killerfantom23@gmail.com"},
+    {name = "GANTA PRANEETH REDDY"}
 ]
 keywords = ["ev", "electric-vehicle", "charge-demand", "machine-learning", "analysis", "prediction"]
 classifiers = [

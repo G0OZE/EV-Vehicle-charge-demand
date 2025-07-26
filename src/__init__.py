@@ -5,7 +5,7 @@ A comprehensive ML tool for analyzing and predicting EV vehicle charge demand pa
 """
 
 __version__ = "1.0.0"
-__author__ = "G0OZE"
+__author__ = "G0OZE, GANTA PRANEETH REDDY"
 __email__ = "killerfantom23@gmail.com"
 __description__ = "ML tool for EV vehicle charge demand analysis and prediction"
 

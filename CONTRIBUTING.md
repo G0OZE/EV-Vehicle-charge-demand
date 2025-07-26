@@ -2,6 +2,11 @@
 
 Thank you for your interest in contributing to the EV Charge Demand Analysis Tool! This document provides guidelines and information for contributors.
 
+## 👥 Core Team
+
+- **G0OZE** - Project Lead & Architecture
+- **GANTA PRANEETH REDDY** - Co-Developer & ML Models
+
 ## 🤝 How to Contribute
 
 ### Reporting Issues
