@@ -1,5 +1,5 @@
 """
-Concrete workflow step implementations for AICTE project workflow.
+Concrete workflow step implementations for EV analysis project workflow.
 """
 import os
 import json
@@ -1178,8 +1178,8 @@ class RepositoryCreationStep(WorkflowStep):
             project_name = "ev_analysis"  # This should come from workflow state
             
             # Create repository
-            repo_name = f"aicte-{project_name}-{datetime.now().strftime('%Y%m%d')}"
-            repo_description = f"AICTE Internship Project: {project_name.replace('_', ' ').title()}"
+            repo_name = f"ev-{project_name}-{datetime.now().strftime('%Y%m%d')}"
+            repo_description = f"EV Analysis Project: {project_name.replace('_', ' ').title()}"
             
             create_result = self.github_service.create_repository(repo_name, repo_description)
             
@@ -1251,7 +1251,7 @@ class RepositoryCreationStep(WorkflowStep):
 
 ## Project Overview
 
-This repository contains the implementation of an AICTE internship project focused on {project_name.replace('_', ' ')}.
+This repository contains the implementation of an EV analysis project focused on {project_name.replace('_', ' ')}.
 
 ## Contents
 
@@ -1301,7 +1301,7 @@ The analysis provides insights into:
 
 ## Author
 
-AICTE Internship Student
+EV Analysis Researcher
 
 ## Date
 
@@ -1309,7 +1309,7 @@ AICTE Internship Student
 
 ## License
 
-This project is created for educational purposes as part of the AICTE internship program.
+This project is created for research purposes as part of EV infrastructure analysis.
 """
         return readme
 
@@ -1326,7 +1326,7 @@ class FileUploadOrchestrationStep(WorkflowStep):
         """Execute file upload orchestration."""
         try:
             project_name = "ev_analysis"  # This should come from workflow state
-            repo_name = f"aicte-{project_name}-{datetime.now().strftime('%Y%m%d')}"
+            repo_name = f"ev-{project_name}-{datetime.now().strftime('%Y%m%d')}"
             
             # Prepare upload bundle
             bundle_result = self.file_manager.prepare_upload_bundle(project_name)
@@ -1436,7 +1436,7 @@ class SubmissionLinkGenerationStep(WorkflowStep):
         """Execute submission link generation."""
         try:
             project_name = "ev_analysis"  # This should come from workflow state
-            repo_name = f"aicte-{project_name}-{datetime.now().strftime('%Y%m%d')}"
+            repo_name = f"ev-{project_name}-{datetime.now().strftime('%Y%m%d')}"
             
             # Generate repository URL
             repo_url = self.github_service.get_repository_url(repo_name)
@@ -1502,7 +1502,7 @@ class SubmissionLinkGenerationStep(WorkflowStep):
             'completion_status': 'completed',
             'lms_submission_instructions': [
                 '1. Copy the repository URL below',
-                '2. Log into the AICTE LMS portal',
+                '2. Log into the research portal',
                 '3. Navigate to the project submission section',
                 '4. Paste the repository URL in the submission field',
                 '5. Add any additional comments if required',

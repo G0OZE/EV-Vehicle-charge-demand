@@ -410,7 +410,7 @@ class ConfigSetup:
     
     def create_environment_file(self) -> None:
         """Create .env template file."""
-        env_content = """# AICTE Project Workflow Environment Variables
+        env_content = """# EV Charge Demand Analysis Environment Variables
 # Copy this file to .env and fill in your values
 
 # GitHub Configuration (Required)

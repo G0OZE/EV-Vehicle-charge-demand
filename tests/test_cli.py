@@ -31,7 +31,7 @@ class TestBaseCLI(unittest.TestCase):
         self.assertIsInstance(self.cli.parser, argparse.ArgumentParser)
         self.assertEqual(
             self.cli.parser.description,
-            "AICTE Project Workflow Automation Tool"
+            "EV Charge Demand Analysis Tool"
         )
     
     @patch('builtins.input', return_value='test response')

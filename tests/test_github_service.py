@@ -1101,12 +1101,12 @@ This project analyzes electric vehicle market trends using Python and data visua
             assert len(upload_result['errors']) == 0
             
             # Step 4: Validate repository for submission
-            validation = github_service.validate_repository_for_submission('aicte-ev-analysis')
+            validation = github_service.validate_repository_for_submission('ev-charge-analysis')
             assert validation['is_valid'] is True
             assert len(validation['files_found']) == 3
             
             # Step 5: Generate submission URLs
-            submission_info = github_service.generate_submission_url('aicte-ev-analysis')
+            submission_info = github_service.generate_submission_url('ev-charge-analysis')
             assert 'repository_url' in submission_info
             assert 'notebook_url' in submission_info
             assert 'dataset_url' in submission_info

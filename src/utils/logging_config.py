@@ -1,5 +1,5 @@
 """
-Advanced logging and debugging utilities for the AICTE workflow system.
+Advanced logging and debugging utilities for the EV analysis system.
 Provides structured logging, performance monitoring, and debugging capabilities.
 """
 import logging
@@ -377,7 +377,7 @@ class LogAnalyzer:
         recent_errors = self.get_recent_errors()
         
         report = []
-        report.append("AICTE Workflow Log Analysis Report")
+        report.append("EV Analysis Log Analysis Report")
         report.append("=" * 40)
         report.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         report.append(f"Log file: {self.log_file}")
