@@ -1,0 +1,46 @@
+{
+  "github": {
+    "token": "",
+    "username": "",
+    "base_url": "https://api.github.com",
+    "timeout_seconds": 30,
+    "max_retries": 3,
+    "rate_limit_buffer": 100
+  },
+  "workflow": {
+    "progress_file": "workflow_progress.json",
+    "project_directory": "./projects",
+    "max_retries": 3,
+    "timeout_seconds": 60,
+    "backup_enabled": true,
+    "backup_interval_hours": 24,
+    "auto_cleanup_days": 30
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/workflow.log",
+    "max_file_size_mb": 10,
+    "backup_count": 5,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "console_output": false
+  },
+  "security": {
+    "encrypt_progress_files": true,
+    "secure_temp_directory": true,
+    "validate_file_types": true,
+    "max_file_size_mb": 100
+  },
+  "performance": {
+    "concurrent_uploads": 3,
+    "chunk_size_kb": 1024,
+    "connection_pool_size": 10,
+    "cache_enabled": true,
+    "cache_ttl_minutes": 60
+  },
+  "notifications": {
+    "enabled": true,
+    "email_on_completion": false,
+    "email_on_error": true,
+    "webhook_url": ""
+  }
+}

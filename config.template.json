@@ -1,0 +1,17 @@
+{
+  "github": {
+    "token": "",
+    "username": "",
+    "base_url": "https://api.github.com"
+  },
+  "workflow": {
+    "progress_file": "workflow_progress.json",
+    "project_directory": "./projects",
+    "max_retries": 3,
+    "timeout_seconds": 30
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "workflow.log"
+  }
+}

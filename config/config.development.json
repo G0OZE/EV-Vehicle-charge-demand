@@ -1,0 +1,52 @@
+{
+  "github": {
+    "token": "",
+    "username": "",
+    "base_url": "https://api.github.com",
+    "timeout_seconds": 30,
+    "max_retries": 2,
+    "rate_limit_buffer": 50
+  },
+  "workflow": {
+    "progress_file": "dev_workflow_progress.json",
+    "project_directory": "./dev_projects",
+    "max_retries": 2,
+    "timeout_seconds": 30,
+    "backup_enabled": false,
+    "backup_interval_hours": 0,
+    "auto_cleanup_days": 7
+  },
+  "logging": {
+    "level": "DEBUG",
+    "file": "logs/workflow_dev.log",
+    "max_file_size_mb": 5,
+    "backup_count": 3,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(funcName)s:%(lineno)d - %(message)s",
+    "console_output": true
+  },
+  "security": {
+    "encrypt_progress_files": false,
+    "secure_temp_directory": false,
+    "validate_file_types": true,
+    "max_file_size_mb": 50
+  },
+  "performance": {
+    "concurrent_uploads": 1,
+    "chunk_size_kb": 512,
+    "connection_pool_size": 5,
+    "cache_enabled": false,
+    "cache_ttl_minutes": 10
+  },
+  "notifications": {
+    "enabled": false,
+    "email_on_completion": false,
+    "email_on_error": false,
+    "webhook_url": ""
+  },
+  "debug": {
+    "mock_github_api": false,
+    "simulate_failures": false,
+    "verbose_output": true,
+    "save_api_responses": true
+  }
+}

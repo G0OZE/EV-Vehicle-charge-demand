@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  workflow-tool:
+    build:
+      context: ../..
+      dockerfile: deployment/docker/Dockerfile
+    container_name: aicte-workflow-tool
+    environment:
+      - ENVIRONMENT=production
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - GITHUB_USERNAME=${GITHUB_USERNAME}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    volumes:
+      - workflow_projects:/app/projects
+      - workflow_logs:/app/logs
+      - workflow_config:/app/config
+      - ./config.json:/app/config.json:ro
+    restart: unless-stopped
+    networks:
+      - workflow-network
+
+  # Optional: Redis for caching (if needed)
+  redis:
+    image: redis:7-alpine
+    container_name: workflow-redis
+    volumes:
+      - workflow_redis:/data
+    networks:
+      - workflow-network
+    restart: unless-stopped
+
+volumes:
+  workflow_projects:
+    driver: local
+  workflow_logs:
+    driver: local
+  workflow_config:
+    driver: local
+  workflow_redis:
+    driver: local
+
+networks:
+  workflow-network:
+    driver: bridge
