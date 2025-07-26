@@ -1,14 +1,14 @@
-# AICTE EV Vehicle Charge Demand Analysis Tool
+# EV Vehicle Charge Demand Analysis Tool
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/G0OZE/EV-Vehicle-charge-demand)
 
-A comprehensive automation tool designed to streamline the AICTE internship project submission workflow, specifically focused on EV vehicle charge demand analysis. This tool helps students efficiently complete their project requirements by automating project setup, code development, GitHub repository creation, and LMS submission processes.
+A comprehensive machine learning tool for analyzing and predicting EV vehicle charge demand patterns. This tool provides automated data processing, analysis workflows, and predictive modeling capabilities for electric vehicle charging infrastructure planning.
 
 ## 🔋 EV Charge Demand Analysis
 
-This project includes a simple ML model that can identify EV Vehicle charge demand patterns, making it perfect for AICTE internship projects focused on electric vehicle adoption and infrastructure planning.
+This project includes advanced ML models that can identify and predict EV vehicle charge demand patterns, making it perfect for infrastructure planning, energy management, and electric vehicle adoption analysis.
 
 ## 🚀 Features
 
@@ -97,17 +97,17 @@ This project includes a simple ML model that can identify EV Vehicle charge dema
 ### Basic Workflow
 
 ```bash
-# Start a new project workflow
-python -m src.cli.workflow_cli start --project "my-aicte-project"
+# Start a new EV analysis project
+python -m src.cli.workflow_cli start --project "my-ev-analysis"
 
-# Resume an existing workflow
-python -m src.cli.workflow_cli resume --project "my-aicte-project"
+# Resume an existing analysis
+python -m src.cli.workflow_cli resume --project "my-ev-analysis"
 
-# Check workflow progress
-python -m src.cli.workflow_cli status --project "my-aicte-project"
+# Check analysis progress
+python -m src.cli.workflow_cli status --project "my-ev-analysis"
 
-# Validate project completion
-python -m src.cli.workflow_cli validate --project "my-aicte-project"
+# Validate analysis completion
+python -m src.cli.workflow_cli validate --project "my-ev-analysis"
 ```
 
 ### Demo Examples
@@ -137,14 +137,14 @@ The tool provides a comprehensive CLI for managing your AICTE projects:
 # Show all available commands
 python -m src.cli.workflow_cli --help
 
-# Initialize a new project
-python -m src.cli.workflow_cli init --name "project-name" --dataset "dataset.csv"
+# Initialize a new EV analysis project
+python -m src.cli.workflow_cli init --name "ev-demand-analysis" --dataset "ev_data.csv"
 
-# Upload project to GitHub
-python -m src.cli.workflow_cli upload --project "project-name" --repo "github-repo-name"
+# Upload analysis to GitHub
+python -m src.cli.workflow_cli upload --project "ev-demand-analysis" --repo "ev-analysis-repo"
 
-# Submit to LMS
-python -m src.cli.workflow_cli submit --project "project-name" --lms-url "your-lms-url"
+# Generate analysis report
+python -m src.cli.workflow_cli report --project "ev-demand-analysis"
 ```
 
 ### Programmatic Usage
@@ -156,12 +156,12 @@ from src.services.github_service import GitHubService
 # Initialize workflow
 workflow = WorkflowCore()
 
-# Create and setup project
-project_result = workflow.initialize_project("my-project", "dataset.csv")
+# Create and setup EV analysis project
+project_result = workflow.initialize_project("ev-analysis", "ev_dataset.csv")
 
 # Upload to GitHub
 github_service = GitHubService()
-repo_url = github_service.create_repository("my-project", "AICTE Project")
+repo_url = github_service.create_repository("ev-analysis", "EV Charge Demand Analysis")
 ```
 
 ## ⚙️ Configuration
@@ -198,7 +198,7 @@ repo_url = github_service.create_repository("my-project", "AICTE Project")
 ## 📁 Project Structure
 
 ```
-aicte-workflow-tool/
+ev-charge-demand-tool/
 ├── src/
 │   ├── cli/                    # Command-line interface
 │   │   ├── workflow_cli.py     # Main CLI commands
@@ -255,14 +255,14 @@ github = GitHubService()
 
 # Create repository
 repo_info = github.create_repository(
-    name="my-aicte-project",
-    description="AICTE Internship Project - Data Analysis"
+    name="my-ev-analysis",
+    description="EV Charge Demand Analysis Project"
 )
 
 # Upload files
 github.upload_file(
-    repo_name="my-aicte-project",
-    file_path="analysis.ipynb",
+    repo_name="my-ev-analysis",
+    file_path="ev_analysis.ipynb",
     file_content=notebook_content
 )
 ```
@@ -339,7 +339,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- AICTE for the internship program structure
+- Electric vehicle industry data providers
 - Contributors and maintainers
 - Open source libraries used in this project
 
@@ -351,5 +351,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ for AICTE students**
+**Made with ❤️ for EV infrastructure planning**
 

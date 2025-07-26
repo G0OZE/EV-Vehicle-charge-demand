@@ -23,11 +23,11 @@ def get_version():
     return "1.0.0"
 
 setup(
-    name="aicte-workflow-tool",
+    name="ev-charge-demand-tool",
     version=get_version(),
-    author="AICTE Workflow Tool Team",
+    author="G0OZE",
     author_email="killerfantom23@gmail.com",
-    description="Automation tool for AICTE internship project workflows",
+    description="ML tool for EV vehicle charge demand analysis and prediction",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/G0OZE/EV-Vehicle-charge-demand",
@@ -71,13 +71,13 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "aicte-workflow=src.cli.workflow_cli:main",
+            "ev-analysis=src.cli.workflow_cli:main",
         ],
     },
     include_package_data=True,
     package_data={
         "": ["*.json", "*.yaml", "*.yml", "*.txt", "*.md"],
     },
-    keywords="aicte, workflow, automation, education, internship, github, jupyter",
+    keywords="ev, electric vehicle, charge demand, machine learning, analysis, prediction",
     zip_safe=False,
 )

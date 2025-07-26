@@ -1,6 +1,6 @@
-# AICTE Project Workflow Tool - Installation Guide
+# EV Charge Demand Analysis Tool - Installation Guide
 
-This guide provides comprehensive instructions for installing and setting up the AICTE Project Workflow Automation Tool.
+This guide provides comprehensive instructions for installing and setting up the EV Charge Demand Analysis Tool.
 
 ## Table of Contents
 
@@ -65,7 +65,7 @@ The tool requires the following Python packages (automatically installed):
 ### Using pip (if packaged)
 
 ```bash
-pip install aicte-workflow-tool
+pip install ev-charge-demand-tool
 ```
 
 ## Manual Installation

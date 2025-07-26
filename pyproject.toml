@@ -3,9 +3,9 @@ requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "aicte-workflow-tool"
+name = "ev-charge-demand-tool"
 dynamic = ["version"]
-description = "Automation tool for AICTE internship project workflows"
+description = "ML tool for EV vehicle charge demand analysis and prediction"
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [
@@ -14,7 +14,7 @@ authors = [
 maintainers = [
     {name = "G0OZE", email = "killerfantom23@gmail.com"}
 ]
-keywords = ["aicte", "workflow", "automation", "education", "internship", "github", "jupyter"]
+keywords = ["ev", "electric-vehicle", "charge-demand", "machine-learning", "analysis", "prediction"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Education",
@@ -86,7 +86,7 @@ Repository = "https://github.com/G0OZE/EV-Vehicle-charge-demand"
 Changelog = "https://github.com/G0OZE/EV-Vehicle-charge-demand/blob/main/CHANGELOG.md"
 
 [project.scripts]
-aicte-workflow = "src.cli.workflow_cli:main"
+ev-analysis = "src.cli.workflow_cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

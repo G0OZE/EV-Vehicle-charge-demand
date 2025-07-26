@@ -1,5 +1,5 @@
 """
-Comprehensive demo showing FileManager integration with EV dataset workflow.
+Comprehensive demo showing EV charge demand analysis workflow.
 """
 import sys
 import os
@@ -68,13 +68,13 @@ def analyze_ev_dataset(file_path: str):
 
 def main():
     """Demonstrate complete EV workflow with FileManager."""
-    print("🚗 AICTE EV Analysis Workflow Demo")
+    print("🚗 EV Charge Demand Analysis Workflow Demo")
     print("=" * 50)
     
     # Initialize FileManager
     fm = FileManager(base_directory="./test_projects")
     
-    project_name = "aicte_ev_analysis"
+    project_name = "ev_charge_demand_analysis"
     csv_file = "3ae033f50fa345051652.csv"
     
     if not os.path.exists(csv_file):
@@ -114,7 +114,7 @@ def main():
     
     print(f"\n📓 Step 4: Generate Jupyter Notebook")
     project_data = {
-        'description': 'Electric Vehicle Adoption Analysis - AICTE Internship Project',
+        'description': 'Electric Vehicle Charge Demand Analysis Project',
         'requirements': [
             'Load and explore the EV dataset with proper data cleaning',
             'Analyze EV adoption trends by state, county, and time period',

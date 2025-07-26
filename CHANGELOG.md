@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the AICTE Workflow Tool will be documented in this file.
+All notable changes to the EV Charge Demand Analysis Tool will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -38,11 +38,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-01-XX
 
 ### Added
-- **Core Workflow Engine**
-  - Step-by-step project workflow automation
+- **Core Analysis Engine**
+  - Step-by-step EV charge demand analysis workflow
   - Progress persistence and recovery
   - Error handling and retry mechanisms
-  - Validation at each workflow step
+  - Validation at each analysis step
 
 - **GitHub Integration**
   - Automatic repository creation

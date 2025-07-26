@@ -1,6 +1,6 @@
-# Contributing to AICTE Workflow Tool
+# Contributing to EV Charge Demand Analysis Tool
 
-Thank you for your interest in contributing to the AICTE Workflow Tool! This document provides guidelines and information for contributors.
+Thank you for your interest in contributing to the EV Charge Demand Analysis Tool! This document provides guidelines and information for contributors.
 
 ## 🤝 How to Contribute
 
@@ -306,4 +306,4 @@ By contributing to this project, you agree that your contributions will be licen
 
 ---
 
-Thank you for contributing to the AICTE Workflow Tool! 🎉
+Thank you for contributing to the EV Charge Demand Analysis Tool! 🎉
