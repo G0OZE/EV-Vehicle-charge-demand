@@ -1,10 +1,14 @@
-# AICTE Project Workflow Automation Tool
+# AICTE EV Vehicle Charge Demand Analysis Tool
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/G0OZE/EV-Vehicle-charge-demand)
 
-A comprehensive automation tool designed to streamline the AICTE internship project submission workflow. This tool helps students efficiently complete their project requirements by automating project setup, code development, GitHub repository creation, and LMS submission processes.
+A comprehensive automation tool designed to streamline the AICTE internship project submission workflow, specifically focused on EV vehicle charge demand analysis. This tool helps students efficiently complete their project requirements by automating project setup, code development, GitHub repository creation, and LMS submission processes.
+
+## 🔋 EV Charge Demand Analysis
+
+This project includes a simple ML model that can identify EV Vehicle charge demand patterns, making it perfect for AICTE internship projects focused on electric vehicle adoption and infrastructure planning.
 
 ## 🚀 Features
 
@@ -348,3 +352,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Made with ❤️ for AICTE students**
+
