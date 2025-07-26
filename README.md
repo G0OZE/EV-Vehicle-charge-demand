@@ -351,5 +351,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ for AICTE students**
+**Made with ❤️ for all of you**
 
