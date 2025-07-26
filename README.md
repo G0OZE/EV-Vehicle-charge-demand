@@ -131,7 +131,7 @@ python simple_test.py
 
 ### Command Line Interface
 
-The tool provides a comprehensive CLI for managing your AICTE projects:
+The tool provides a comprehensive CLI for managing your EV analysis projects:
 
 ```bash
 # Show all available commands

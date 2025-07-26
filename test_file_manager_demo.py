@@ -30,7 +30,7 @@ def main():
         if copy_result['success']:
             print(f"\n3. Creating Jupyter notebook...")
             project_data = {
-                'description': 'Electric Vehicle Analysis - AICTE Internship Project',
+                'description': 'Electric Vehicle Charge Demand Analysis Project',
                 'requirements': [
                     'Analyze EV adoption trends by state and county',
                     'Compare Battery Electric Vehicles (BEVs) vs Plug-In Hybrid Electric Vehicles (PHEVs)',

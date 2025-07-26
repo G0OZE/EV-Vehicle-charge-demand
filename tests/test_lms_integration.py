@@ -294,7 +294,7 @@ class TestLMSIntegrationService(unittest.TestCase):
             'markdown'
         )
         
-        self.assertIn('# AICTE Project Submission Report', report)
+        self.assertIn('# EV Analysis Project Report', report)
         self.assertIn('Test Project', report)
         self.assertIn('github.com/testuser/test-project', report)
         self.assertIn('75.0%', report)
@@ -321,7 +321,7 @@ class TestLMSIntegrationService(unittest.TestCase):
             'text'
         )
         
-        self.assertIn('AICTE PROJECT SUBMISSION REPORT', report)
+        self.assertIn('EV ANALYSIS PROJECT REPORT', report)
         self.assertIn('Test Project', report)
         self.assertIn('github.com/testuser/test-project', report)
         self.assertIn('75.0%', report)

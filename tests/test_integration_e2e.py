@@ -1,5 +1,5 @@
 """
-End-to-end integration tests for the AICTE Project Workflow system.
+End-to-end integration tests for the EV Charge Demand Analysis system.
 Tests complete workflow execution with mock services, error recovery,
 workflow resumption, cross-platform compatibility, and performance.
 """
@@ -75,7 +75,7 @@ class TestEndToEndWorkflow(unittest.TestCase):
                 {
                     "cell_type": "markdown",
                     "metadata": {},
-                    "source": ["# EV Analysis Project\n", "AICTE Internship Project"]
+                    "source": ["# EV Analysis Project\n", "Charge Demand Analysis Project"]
                 },
                 {
                     "cell_type": "code",

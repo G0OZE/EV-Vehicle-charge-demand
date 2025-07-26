@@ -293,7 +293,7 @@ class TestHelpSystemCLI(unittest.TestCase):
         self.help_cli._show_main_help()
         
         output = mock_stdout.getvalue()
-        self.assertIn('AICTE Workflow Help System', output)
+        self.assertIn('EV Analysis Help System', output)
         self.assertIn('Available Commands', output)
         self.assertIn('topic', output)
         self.assertIn('troubleshoot', output)

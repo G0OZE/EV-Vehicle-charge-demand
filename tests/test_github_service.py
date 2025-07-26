@@ -66,7 +66,7 @@ class TestGitHubService:
         headers = github_service.session.headers
         assert headers['Authorization'] == 'token test_token_123'
         assert headers['Accept'] == 'application/vnd.github.v3+json'
-        assert 'AICTE-Workflow-Tool/testuser' in headers['User-Agent']
+        assert 'EV-Analysis-Tool/testuser' in headers['User-Agent']
     
     @patch('src.services.github_service.requests.Session.request')
     def test_make_request_success(self, mock_request, github_service, mock_response):
@@ -427,7 +427,7 @@ class TestGitHubServiceIntegration:
             }
             
             # Create repository
-            repo = service.create_repository('test-project', 'Test project for AICTE')
+            repo = service.create_repository('test-project', 'Test project for EV analysis')
             assert repo['name'] == 'test-project'
             
             # Mock file upload responses
@@ -439,7 +439,7 @@ class TestGitHubServiceIntegration:
             ]
             
             # Initialize README
-            readme_result = service.initialize_readme('test-project', '# Test Project\n\nAICTE internship project')
+            readme_result = service.initialize_readme('test-project', '# Test Project\n\nEV analysis project')
             assert readme_result['path'] == 'README.md'
             
             # Upload notebook
@@ -480,7 +480,7 @@ class TestGitHubRepositoryOperations:
                 {
                     "cell_type": "markdown",
                     "metadata": {},
-                    "source": ["# Test Notebook\n", "This is a test notebook for AICTE project."]
+                    "source": ["# Test Notebook\n", "This is a test notebook for EV analysis project."]
                 },
                 {
                     "cell_type": "code",
@@ -784,7 +784,7 @@ class TestGitHubRepositoryOperationsIntegration:
                 {
                     "cell_type": "markdown",
                     "metadata": {},
-                    "source": ["# AICTE Project\n", "This is my internship project."]
+                    "source": ["# EV Analysis Project\n", "This is my charge demand analysis project."]
                 },
                 {
                     "cell_type": "code",
@@ -832,9 +832,9 @@ class TestGitHubRepositoryOperationsIntegration:
         with patch.object(github_service, '_make_request') as mock_request:
             # Mock repository creation
             repo_data = {
-                'name': 'aicte-project-week1',
-                'full_name': 'testuser/aicte-project-week1',
-                'html_url': 'https://github.com/testuser/aicte-project-week1'
+                'name': 'ev-analysis-project',
+                'full_name': 'testuser/ev-analysis-project',
+                'html_url': 'https://github.com/testuser/ev-analysis-project'
             }
             
             # Mock file upload sequence
@@ -850,19 +850,19 @@ class TestGitHubRepositoryOperationsIntegration:
             
             # Step 1: Create repository
             repo = github_service.create_repository(
-                'aicte-project-week1', 
-                'AICTE Internship Week 1 Project'
+                'ev-analysis-project', 
+                'EV Charge Demand Analysis Project'
             )
-            assert repo['name'] == 'aicte-project-week1'
+            assert repo['name'] == 'ev-analysis-project'
             
             # Step 2: Initialize README
-            readme_content = "# AICTE Project Week 1\n\nThis repository contains my internship project."
-            readme_result = github_service.initialize_readme('aicte-project-week1', readme_content)
+            readme_content = "# EV Analysis Project\n\nThis repository contains my charge demand analysis project."
+            readme_result = github_service.initialize_readme('ev-analysis-project', readme_content)
             assert readme_result['path'] == 'README.md'
             
             # Step 3: Upload project files
             upload_result = github_service.upload_notebook_and_dataset(
-                'aicte-project-week1',
+                'ev-analysis-project',
                 temp_project_files['notebook_path'],
                 temp_project_files['dataset_path']
             )
@@ -872,10 +872,10 @@ class TestGitHubRepositoryOperationsIntegration:
             assert len(upload_result['errors']) == 0
             
             # Step 4: Generate submission URL
-            submission_info = github_service.generate_submission_url('aicte-project-week1')
-            assert submission_info['repository_url'] == 'https://github.com/testuser/aicte-project-week1'
-            assert submission_info['notebook_url'] == 'https://github.com/testuser/aicte-project-week1/blob/main/notebook.ipynb'
-            assert submission_info['dataset_url'] == 'https://github.com/testuser/aicte-project-week1/blob/main/dataset.csv'
+            submission_info = github_service.generate_submission_url('ev-analysis-project')
+            assert submission_info['repository_url'] == 'https://github.com/testuser/ev-analysis-project'
+            assert submission_info['notebook_url'] == 'https://github.com/testuser/ev-analysis-project/blob/main/notebook.ipynb'
+            assert submission_info['dataset_url'] == 'https://github.com/testuser/ev-analysis-project/blob/main/dataset.csv'
     
     def test_repository_operations_with_rate_limiting(self, github_service, temp_project_files):
         """Test repository operations with rate limiting and recovery."""
@@ -1038,16 +1038,16 @@ class TestGitHubRepositoryOperationsIntegration:
             assert len(result['errors']) == 0
             assert mock_upload.call_count == 2
     
-    def test_end_to_end_aicte_workflow_simulation(self, github_service, temp_project_files):
-        """Test complete end-to-end AICTE project submission workflow."""
+    def test_end_to_end_ev_analysis_workflow_simulation(self, github_service, temp_project_files):
+        """Test complete end-to-end EV analysis project workflow."""
         with patch.object(github_service, '_make_request') as mock_request:
             # Complete workflow simulation
             mock_responses = [
                 # Repository creation
                 {
-                    'name': 'aicte-ev-analysis',
-                    'full_name': 'testuser/aicte-ev-analysis',
-                    'html_url': 'https://github.com/testuser/aicte-ev-analysis'
+                    'name': 'ev-charge-analysis',
+                    'full_name': 'testuser/ev-charge-analysis',
+                    'html_url': 'https://github.com/testuser/ev-charge-analysis'
                 },
                 # README upload (check + upload)
                 GitHubAPIError("Not found", 404),
@@ -1068,15 +1068,15 @@ class TestGitHubRepositoryOperationsIntegration:
             
             # Step 1: Create repository
             repo = github_service.create_repository(
-                'aicte-ev-analysis',
-                'AICTE EV Market Analysis Project'
+                'ev-charge-analysis',
+                'EV Charge Demand Analysis Project'
             )
-            assert repo['name'] == 'aicte-ev-analysis'
+            assert repo['name'] == 'ev-charge-analysis'
             
             # Step 2: Initialize README
-            readme_content = """# EV Market Analysis Project
+            readme_content = """# EV Charge Demand Analysis Project
             
-## AICTE Internship Week 1
+## Machine Learning Analysis
 
 This project analyzes electric vehicle market trends using Python and data visualization.
 
@@ -1090,11 +1090,11 @@ This project analyzes electric vehicle market trends using Python and data visua
 2. Upload the dataset
 3. Run all cells to see the analysis
 """
-            github_service.initialize_readme('aicte-ev-analysis', readme_content)
+            github_service.initialize_readme('ev-charge-analysis', readme_content)
             
             # Step 3: Upload project files
             upload_result = github_service.upload_notebook_and_dataset(
-                'aicte-ev-analysis',
+                'ev-charge-analysis',
                 temp_project_files['notebook_path'],
                 temp_project_files['dataset_path']
             )

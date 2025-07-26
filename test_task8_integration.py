@@ -22,19 +22,19 @@ def test_task8_integration():
         project_id="test_project",
         dataset_url="https://example.com/dataset.csv",
         code_template_url="https://example.com/template.ipynb",
-        project_description="Test project for AICTE workflow automation",
+        project_description="Test project for EV charge demand analysis",
         requirements=["Complete notebook", "Upload dataset", "Create repository"],
         deadline=datetime.now() + timedelta(days=5)
     )
     
     # Create test workflow state
     workflow_state = WorkflowState(
-        project_name="AICTE Test Project",
+        project_name="EV Analysis Test Project",
         current_step=8,
         completed_steps=[1, 2, 3, 4, 5, 6, 7],
         project_data=project_data,
-        github_repo="testuser/aicte-test-project",
-        submission_link="https://github.com/testuser/aicte-test-project"
+        github_repo="testuser/ev-analysis-test-project",
+        submission_link="https://github.com/testuser/ev-analysis-test-project"
     )
     
     # Initialize services
@@ -75,7 +75,7 @@ def test_task8_integration():
         print("\nTesting Task 8.2: LMS integration helpers...")
         
         # Generate submission summary
-        student_info = {'name': 'Test Student', 'id': 'AICTE001'}
+        student_info = {'name': 'Test Student', 'id': 'EV001'}
         summary = lms_service.generate_submission_summary(
             workflow_state, submission_status, student_info
         )
@@ -142,7 +142,7 @@ def create_test_files(temp_dir):
         "cells": [
             {
                 "cell_type": "markdown",
-                "source": "# AICTE Test Project\n\nThis is a test notebook for the AICTE workflow."
+                "source": "# EV Analysis Test Project\n\nThis is a test notebook for EV charge demand analysis."
             },
             {
                 "cell_type": "code",
@@ -159,7 +159,7 @@ def create_test_files(temp_dir):
         ]
     }
     
-    with open(temp_path / "aicte_test_project.ipynb", 'w') as f:
+    with open(temp_path / "ev_analysis_test_project.ipynb", 'w') as f:
         json.dump(notebook_content, f, indent=2)
     
     # Create test dataset
@@ -169,10 +169,10 @@ def create_test_files(temp_dir):
             f.write(f"{i},item_{i},{i*10},cat_{i%5},{i*0.1}\n")
     
     # Create comprehensive README
-    readme_content = """# AICTE Test Project
+    readme_content = """# EV Analysis Test Project
 
 ## Project Description
-This project demonstrates the AICTE workflow automation system for internship project submissions.
+This project demonstrates the EV charge demand analysis system for research and development.
 
 ## Installation
 1. Clone this repository
@@ -190,8 +190,8 @@ The dataset contains sample data for testing the workflow automation.
 ## Results
 The analysis provides insights into the test data patterns and distributions.
 
-## Submission
-This project was submitted as part of the AICTE internship program using the automated workflow system.
+## Analysis Results
+This project provides comprehensive analysis of EV charge demand patterns using machine learning techniques.
 """
     
     with open(temp_path / "README.md", 'w') as f:

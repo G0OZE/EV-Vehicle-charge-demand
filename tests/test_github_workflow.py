@@ -39,8 +39,8 @@ class TestRepositoryCreationStep(unittest.TestCase):
         # Mock GitHub service methods
         self.github_service.is_authenticated.return_value = True
         self.github_service.create_repository.return_value = {
-            'html_url': 'https://github.com/user/aicte-ev_analysis-20240119',
-            'name': 'aicte-ev_analysis-20240119'
+            'html_url': 'https://github.com/user/ev_analysis-20240119',
+            'name': 'ev_analysis-20240119'
         }
         self.github_service.upload_file.return_value = {
             'content': {'name': 'README.md'}
@@ -274,7 +274,7 @@ class TestSubmissionLinkGenerationStep(unittest.TestCase):
         """Test submission summary generation."""
         summary = self.step._generate_submission_summary(
             "ev_analysis", 
-            "aicte-ev_analysis-20240119", 
+            "ev_analysis-20240119", 
             "https://github.com/user/test-repo"
         )
         
@@ -286,7 +286,7 @@ class TestSubmissionLinkGenerationStep(unittest.TestCase):
         self.assertIn('lms_submission_instructions', summary)
         
         self.assertEqual(summary['project_title'], 'Ev Analysis')
-        self.assertEqual(summary['repository_name'], 'aicte-ev_analysis-20240119')
+        self.assertEqual(summary['repository_name'], 'ev_analysis-20240119')
         self.assertEqual(summary['repository_url'], 'https://github.com/user/test-repo')
         self.assertTrue(summary['ready_for_submission'])
         
