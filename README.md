@@ -164,6 +164,14 @@ github_service = GitHubService()
 repo_url = github_service.create_repository("ev-analysis", "EV Charge Demand Analysis")
 ```
 
+### Dashboard
+
+Launch the Streamlit dashboard to monitor workflow progress:
+
+```bash
+streamlit run src/ui/dashboard.py
+```
+
 ## ⚙️ Configuration
 
 ### Configuration Files
