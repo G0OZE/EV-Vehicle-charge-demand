@@ -72,6 +72,7 @@ setup(
     entry_points={
         "console_scripts": [
             "ev-analysis=src.cli.workflow_cli:main",
+            "ev-dashboard=src.ui.dashboard:main",
         ],
     },
     include_package_data=True,

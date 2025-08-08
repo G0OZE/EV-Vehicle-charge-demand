@@ -46,3 +46,7 @@ GitPython>=3.1.0
 # Async support
 aiohttp>=3.7.0
 asyncio-throttle>=1.0.0
+
+# Dashboard and visualization
+streamlit>=1.25.0
+plotly>=5.15.0  # Optional for rich charts
